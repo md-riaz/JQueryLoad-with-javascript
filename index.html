@@ -23,7 +23,11 @@
   <script>
     //------------self execute function for homepage load with AJAX-----------
     
-     AJAX("contents/home.html");
+     (function() {
+      Location("#main");
+      console.log(target);
+      AJAX("contents/home.html");
+    })();
 
     //---------------------------------initial---------------------------------
 
