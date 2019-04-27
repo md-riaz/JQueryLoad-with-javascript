@@ -26,28 +26,24 @@
     <div id="main_content"></div>
   </body>
   <script>
-
-
     //------------self execute function for homepage load with AJAX-----------
-      loc("#main").ajax("contents/home.html");
+    loc("#main").ajax("contents/home.html");
     //---------------------------------self execute function end---------------------------------
 
     //--------------For navigation a tag default behavior prevent-------------------
+    nav("div.topnav a").prevent();
+    //--------------For navigation a tag to load pages-------------------
     var nav = _("div.topnav a");
     console.log(nav);
 
     for (var x = 0; x < nav.length; x++) {
-      nav[x].addEventListener("click", function(event) {
+      nav[x].addEventListener("click", function() {
         var page = this.getAttribute("href");
         console.log(page);
-        loc("#main_content").ajax("contents/" + page + ".html");;
+        loc("#main_content").ajax("contents/" + page + ".html");
         console.log(target);
-        event.preventDefault();
       });
     }
-    //-----------------------------preventDefault End----------------------------------
-
-
-  
+    //-----------------------------preventDefault & nav page load End----------------------------------
   </script>
 </html>

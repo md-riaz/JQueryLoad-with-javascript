@@ -22,7 +22,24 @@ function loc(loc) {
     };
     xhr.send();
   }
-  return {ajax:ajax}
+  return { ajax: ajax };
+}
+//----------------------AJAX Function End--------------------------------
+
+//-----prevent following links of a tag-----
+function nav(nav) {
+  var nav = _(nav);
+  console.log(nav);
+
+  function prevent() {
+    for (var x = 0; x < nav.length; x++) {
+      console.log(target);
+      nav[x].addEventListener("click", function(event) {
+        event.preventDefault();
+      });
+    }
+  }
+  return { prevent: prevent };
 }
 
-//----------------------AJAX Function End--------------------------------
+//--------------end-----------------------
