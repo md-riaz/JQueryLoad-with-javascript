@@ -39,6 +39,8 @@
       nav[x].addEventListener("click", function(event) {
         var page = this.getAttribute("href");
         console.log(page);
+        Location("#main");
+        AJAX("contents/" + page + ".html");
         event.preventDefault();
       });
     }
