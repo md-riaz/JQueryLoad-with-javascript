@@ -22,12 +22,9 @@
   </body>
   <script>
     //------------self execute function for homepage load with AJAX-----------
-    (function() {
-      Location("#main");
-      console.log(target);
+    
+     AJAX("contents/home.html");
 
-      return AJAX("contents/home.html");
-    })();
     //---------------------------------initial---------------------------------
 
     //--------------For navigation a tag default behavior prevent-------------------
