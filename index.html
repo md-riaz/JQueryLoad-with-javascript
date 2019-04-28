@@ -37,13 +37,15 @@
     var nav = _("div.topnav a");
     console.log(nav);
 
-    for (var x = 0; x < nav.length; x++) {
-      nav[x].addEventListener("click", function() {
+    nav.forEach(getPage);
+    function getPage(element){
+      element.addEventListener("click", function() {
         var page = this.getAttribute("href");
         console.log(page);
         loc("#main_content").ajax("contents/" + page + ".html");
         console.log(target);
-      });
+    });
+      
     }
     //-----------------------------preventDefault & nav page load End----------------------------------
   </script>

@@ -32,10 +32,19 @@ function nav(nav) {
   console.log(nav);
 
   function prevent() {
-    for (var x = 0; x < nav.length; x++) {
-      console.log(target);
-      nav[x].addEventListener("click", function(event) {
+    nav.forEach(navItems);
+
+    function navItems(item) {
+      console.log(item);
+
+      item.addEventListener("click", function(event) {
         event.preventDefault();
+        var list = _("body a");
+        list.forEach(function(all) {
+          all.classList.remove("active");
+        });
+        console.log(list);
+        item.classList.add("active");
       });
     }
   }
