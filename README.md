@@ -8,8 +8,10 @@ Added method chaining functionality so that multiple methods can be called with 
 
 ## Example :-
 
-```<script src="ajax.js"></script>```  
-```
+```html
+<script src="ajax.js"></script>
+```  
+```html
 <script>
 loc("#content").ajax("contents/home.html");
 </script>
@@ -18,10 +20,14 @@ loc("#content").ajax("contents/home.html");
 ### Code differences in _JQuery.js_ vs ajax.js---
 
 ### In JQuery, code is:
-```$("#content").load("contents/home.html");```
+```html
+$("#content").load("contents/home.html");
+```
 
 ### & In _ajax.j_s, code is:
-```loc("#content").ajax("contents/home.html");```  
+```html
+loc("#content").ajax("contents/home.html");
+```  
 
 ##### 2. To prevent navigation links from following link on **href** >  
 - set a tag list with selector in **nav()** function  
@@ -30,7 +36,7 @@ loc("#content").ajax("contents/home.html");
 
 ## Example :-
 
-```
+```html
 nav("div.topnav a").prevent();
 ```
 
