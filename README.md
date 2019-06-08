@@ -19,16 +19,16 @@ loc("#content").ajax("contents/home.html");
 
 ### Code differences in _JQuery.js_ vs ajax.js---
 
-### In JQuery, code is:
+### In JQuery :
 
-```html
+```js
 $("#content").load("contents/home.html");
 ```  
 
 
-### & In _ajax.js_, code is:
+### & In _ajax.js_ :
 
-```html 
+```js 
 loc("#content").ajax("contents/home.html");
 ```  
 
@@ -39,7 +39,7 @@ loc("#content").ajax("contents/home.html");
 
 ## Example :-
 
-```html
+```js
 nav("div.topnav a").prevent();
 ```
 
