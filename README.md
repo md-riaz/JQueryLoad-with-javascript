@@ -21,8 +21,8 @@ loc("#content").ajax("contents/home.html");
 
 ### In JQuery, code is:
 ```html
-$("#content").load("contents/home.html");
-```
+$("#content").load("contents/home.html");```
+
 
 ### & In _ajax.j_s, code is:
 ```html
