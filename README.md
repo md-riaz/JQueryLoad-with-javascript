@@ -26,7 +26,8 @@ $("#content").load("contents/home.html");
 ```  
 
 
-### & In _ajax.j_s, code is:
+### & In _ajax.js_, code is:
+
 ```html 
 loc("#content").ajax("contents/home.html");
 ```  
